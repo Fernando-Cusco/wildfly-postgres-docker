@@ -1,0 +1,8 @@
+/usr/src/mymaven/src/main/java/resources/Recursos.java
+/usr/src/mymaven/src/main/java/dao/PersonaDao.java
+/usr/src/mymaven/src/main/java/modelo/Persona.java
+/usr/src/mymaven/src/main/java/resources/JaxRsActivator.java
+/usr/src/mymaven/src/main/java/services/PersonaService.java
+/usr/src/mymaven/src/main/java/controllador/PersonaController.java
+/usr/src/mymaven/src/main/java/negocio/PersonaOn.java
+/usr/src/mymaven/src/main/java/resources/CORSFilter.java

@@ -1,0 +1,23 @@
+version: '3.8'
+services:
+
+  app-postgres:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: admin
+    volumes:
+      - ./create-user.sql:/docker-entrypoint-initdb.d/create-user.sql
+    ports:
+      - "5432:5432"
+
+  app-wildfly:
+    build: .
+    ports:
+      - "80:8080"
+  
+    depends_on:
+        - app-postgres
+
+
+
+    

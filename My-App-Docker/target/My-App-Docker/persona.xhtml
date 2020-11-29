@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+<h:head></h:head> 
+<body> 
+	
+	<div>
+		<h:form>
+			<div>
+				<label>Nombres</label>
+				<h:inputText value="#{personaController.persona.nombres}" />
+			</div>
+			<div>
+				<label>Apellidos</label>
+				<h:inputText value="#{personaController.persona.apellidos}" />
+			</div>
+			<div>
+				<label>Cedula</label>
+				<h:inputText value="#{personaController.persona.cedula}" />
+			</div>
+			<div>
+				<label>Edad</label>
+				<h:inputText type="number" value="#{personaController.persona.edad}" />
+			</div>
+			<div>
+				<label>Correo electronico</label>
+				<h:inputText value="#{personaController.persona.correo}" />
+			</div>
+			<div>
+				<label>Password</label>
+				<h:inputText value="#{personaController.persona.password}" />
+			</div>
+			<h:commandButton action="#{personaController.add()}" value="Add" />
+			<div>
+				<label>Ingrese cedula a buscar</label>
+				<h:inputText value="#{personaController.cedula}" />
+				<h:commandButton action="#{personaController.search()}" value="Search" />
+			</div>
+			
+		</h:form>
+	</div>
+	
+	<div>
+		<h:dataTable value="#{personaController.personas}" var="persona">
+			<h:column>
+				<f:facet name="header">Nombres</f:facet>
+				#{persona.nombres}
+			</h:column>
+			<h:column>
+				<f:facet name="header">Apellidos</f:facet>
+				#{persona.apellidos}
+			</h:column>
+			<h:column>
+				<f:facet name="header">Cedula</f:facet>
+				#{persona.cedula}
+			</h:column>
+			<h:column>
+				<f:facet name="header">Edad</f:facet>
+				#{persona.edad}
+			</h:column>
+			<h:column>
+				<f:facet name="header">Correo</f:facet>
+				#{persona.correo}
+			</h:column>
+			<h:column>
+				<f:facet name="header">Password</f:facet>
+				#{persona.password}
+			</h:column>
+		</h:dataTable>
+	</div>
+</body> 
+</html>

@@ -1,0 +1,9 @@
+controllador/PersonaController.class
+modelo/Persona.class
+resources/Recursos.class
+dao/PersonaDao.class
+resources/JaxRsActivator.class
+resources/CORSFilter.class
+services/PersonaService.class
+negocio/PersonaOn.class
+modelo/Persona_.class
